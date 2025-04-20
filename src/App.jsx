@@ -1,20 +1,36 @@
-import { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
-function App() {
-  const [message, setMessage] = useState('Welcome to my world');
+const App = () => {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
-  useEffect(() => {
-    console.log('Component mounted!');
-    setTimeout(() => {
-      setMessage('Thanks for visiting!');
-    }, 3000); // after 3 seconds, message will change
-  }); // empty array = runs only once when component mounts
+  const login = () => setIsAuthenticated(true);
+  const logout = () => setIsAuthenticated(false);
 
   return (
-    <h1>
-      {message}
-    </h1>
+    <div className="p-6 max-w-md mx-auto bg-white rounded-xl shadow-md space-y-4 text-center">
+      {isAuthenticated ? (
+        <>
+          <h2 className="text-xl font-semibold text-green-700">Welcome back!</h2>
+          <button 
+            onClick={logout} 
+            className="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600"
+          >
+            Logout
+          </button>
+        </>
+      ) : (
+        <>
+          <h2 className="text-xl font-semibold text-gray-700">Please log in</h2>
+          <button 
+            onClick={login} 
+            className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+          >
+            Login
+          </button>
+        </>
+      )}
+    </div>
   );
-}
+};
 
 export default App;
