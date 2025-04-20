@@ -1,22 +1,78 @@
-.main{
-    border: 1px solid #cff;
-    padding : 1rem;
-    border-radius: 8px;
-    width:250px;
+/* App.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    padding: 40px;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card {
+    background-color: white;
+    width: 100%;
+    max-width: 500px;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  .card:hover {
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+  }
+  
+  h2 {
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0 0 0 0.1);
-    background-color: #f9f9f9;
-    margin : 1rem auto
-}
-.main .btn{
-    background-color: #04AA6D;
+    margin-bottom: 30px;
+    color: #333;
+  }
+  
+  form label {
+    display: block;
+    margin-bottom: 15px;
+    color: #444;
+  }
+  
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    transition: border 0.3s;
+  }
+  
+  input[type="text"]:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    background-color: #007bff;
     border: none;
+    border-radius: 6px;
     color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
     font-size: 16px;
-    margin: 4px 2px;
     cursor: pointer;
-}
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  .message {
+    margin-top: 20px;
+    font-weight: bold;
+    color: green;
+    text-align: center;
+  }
+  
