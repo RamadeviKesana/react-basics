@@ -1,8 +1,8 @@
 // App.js
 import React, { useState } from 'react';
-import './styles.css'; 
+import './ContactForm.css'; 
 
-const App = () => {
+const ContactForm = () => {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
@@ -100,4 +100,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default ContactForm;
